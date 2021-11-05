@@ -1,0 +1,61 @@
+// General Sytles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $text-fontFamily;
+    font-size: 20px;
+    line-height: $textLine;
+    font-weight: $textWeight;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-fontFamily;
+}
+
+h2 {
+    font-size: $h2Size;
+    line-height: $h2Line;
+    font-weight: $h2Weight;
+    letter-spacing: $h2Spacing;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    &::after {
+        content: "";
+        width: 92px;
+        height: 5px;
+        position: absolute;
+        bottom: -20px;
+        background-color: $headingText;
+        border-radius: 2px;
+    }    
+}
+
+p {
+    font-size: $textSize;
+    line-height: $textLine;
+    font-weight: $textWeight;
+    margin-bottom: $textLine;
+}
+
+a {
+    color: $secondary;
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+        color: $headingText;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

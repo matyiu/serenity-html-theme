@@ -1,0 +1,85 @@
+/*
+---------------------------------
+----- Grid system
+---------------------------------
+*/
+
+// Containers
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+        .container {
+            max-width: $width;
+        }
+    }
+}
+
+// Grid system
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
+    gap: 30px;
+    align-items: flex-start;
+
+    &-rowSpaceBetween {
+        justify-content: space-between;
+    }
+
+    &-rowSpaceAround {
+        justify-content: space-around;
+    }
+
+    &-columnCenter {
+        align-items: center;
+    }
+}
+
+@for $col from 1 through $grid-columns {
+    .col-#{$col} {
+        grid-column-start: auto;
+        grid-column-end: span $col;
+    }
+
+    .order-#{$col} {
+        order: $col;
+    }
+}
+
+@for $col from 1 through $grid-columns {
+    .col-start-#{$col} {
+        grid-column-start: $col;
+    }
+}
+
+@each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+        @for $col from 1 through $grid-columns {
+            .col-#{$col}-#{$breakpoint} {
+                grid-column-start: auto;
+                grid-column-end: span $col;
+            }
+
+            .order-#{$col}-#{$breakpoint} {
+                order: $col;
+            }
+        }
+
+        @for $col from 1 through $grid-columns {
+            .col-start-#{$col}-#{$breakpoint} {
+                grid-column-start: $col;
+            }
+        }
+    }
+}
+
+.flex {
+    display: flex;
+    flex-flow: wrap row;
+}

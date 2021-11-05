@@ -1,0 +1,105 @@
+/*
+---------------------------------
+----- Color System
+---------------------------------
+*/
+
+// Colors
+
+$white: #fff;
+
+$primary: #ECBA09;
+$secondary: #ED3A3A;
+$heroOverlay: rgba(#EC1F1F, 0.73);
+$footerBg: #0E0E0E;
+
+// Typography
+
+// Dark
+$headingText: #131212;
+$normalText: #1E1C1C;
+
+// Light
+$headingTextLight: #EFEFEF;
+$normalTextLight: #C9C9C9;
+
+/*
+---------------------------------
+----- General
+---------------------------------
+*/
+
+$button-shadow: 0px 4px 21px 0px rgba(#343434, 0.33);
+
+$border-radius: 3px;
+
+/*
+---------------------------------
+----- Typography
+---------------------------------
+*/
+
+// General
+
+$boldHeading-fontFamily: "Roboto Slab", sans-serif;
+$heading-fontFamily: "PT Sans", sans-serif;
+$text-fontFamily: "PT Sans", sans-serif;
+
+// Bold Title
+
+$boldTitleSize:   em(80);
+$boldTitleLine:   em(95, 80);
+$boldTitleWeight: 900;
+
+// Headings
+
+$h2Size:    40px;
+$h2Line:    40px;
+$h2Weight:  300;
+$h2Spacing: 0.13em;
+
+// Paragraph
+
+$textSize:    em(20);
+$textLine:    em(30, 20);
+$textWeight:  400;
+
+// Menu Link
+
+$menuLinkSize:    em(15);
+$menuLinkLine:    em(19, 15);
+$menuLinkWeight:  400;
+
+// Components
+
+$copySize:    em(16);
+$copyLine:    em(20, 16);
+$copyWeight:  400;
+
+$buttonSize:    rem(22);
+$buttonLine:    rem(22, 22);
+$buttonWeight:  400;
+
+$logoSize:    em(24);
+$logoLine:    em(30, 24);
+$logoWeight:  400;
+
+/*
+---------------------------------
+----- Grid system
+---------------------------------
+*/
+
+// Breakpoints
+
+$breakpoints: (
+    xs: 360px,
+    sm: 568px,
+    md: 768px,
+    lg: 1200px,
+    xl: 1440px
+);
+
+// Grid
+
+$grid-columns: 12;
