@@ -42,7 +42,6 @@
 }
 
 .hero {
-    // background-image: url('/dist/assets/images/hero-bg.png');
     background-size: cover;
     padding: 125px 0;
     background-position: top center;
@@ -76,5 +75,16 @@
             @include fontStyles($heroSubHeading);
             margin-bottom: 38px;
         }
+    }
+}
+
+.about {
+    padding: 150px 0;
+
+    &-content {
+        max-width: 578px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
     }
 }
