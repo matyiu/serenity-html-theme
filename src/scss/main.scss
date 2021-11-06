@@ -8,3 +8,73 @@
 @import 'components';
 
 // Custom Theme Styles
+.navbar {
+    width: 100%;
+    background: $primaryDarkBg;
+    color: $normalTextLight;
+
+    &-secondary {
+        background: $primaryDarkerBg;
+    }
+
+    a {
+        color: $normalTextLight;
+    }
+
+    .grid {
+        align-items: center;
+    }
+
+    .link-tel {
+        padding: 10px;
+    }
+
+    .social-links a:hover,
+    .menu a:hover,
+    .menu-toggle:hover,
+    .link-tel:hover {
+        background: $primary;
+    }
+
+    .menu-toggle {
+        color: $headingTextLight;
+    }
+}
+
+.hero {
+    // background-image: url('/dist/assets/images/hero-bg.png');
+    background-size: cover;
+    padding: 125px 0;
+    background-position: top center;
+    background-image: url('/dist/assets/images/hero-bg.png');
+
+    @media (min-width: map-get($breakpoints, 'md')) {
+        background-image: url('/dist/assets/images/hero-bg-lg.png');
+    }
+
+    @media (min-width: map-get($breakpoints, 'lg')) {
+        padding: 126px 0 230px;
+    }
+
+    @media (min-width: map-get($breakpoints, 'xl')) {
+        background-image: url('/dist/assets/images/hero-bg-xl.png');
+    }
+
+    &-heading {
+        margin-bottom: 25px;
+        @include fontStyles(fontMap(em(48), em(74, 48), 400));
+
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            @include fontStyles($heroHeading);
+        }
+    }
+
+    &-subheading {
+        @include fontStyles(fontMap(em(22), em(40, 22), 400));
+
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            @include fontStyles($heroSubHeading);
+            margin-bottom: 38px;
+        }
+    }
+}

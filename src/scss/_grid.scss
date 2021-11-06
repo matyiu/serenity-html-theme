@@ -13,9 +13,11 @@
 }
 
 @each $breakpoint, $width in $breakpoints {
-    @media (min-width: $width) {
-        .container {
-            max-width: $width;
+    @if ($width >= 568) {
+        @media (min-width: $width) {
+            .container {
+                max-width: $width;
+            }
         }
     }
 }
@@ -82,4 +84,24 @@
 .flex {
     display: flex;
     flex-flow: wrap row;
+
+    &-row-end {
+        justify-content: flex-end;
+    }
+
+    &-row-center {
+        justify-content: center;
+    }
+
+    @each $breakpoint, $width in $breakpoints {
+        @media (min-width: $width) {
+            &-row-end-#{$breakpoint} {
+                justify-content: flex-end;
+            }
+
+            &-row-center-#{$breakpoint} {
+                justify-content: center;
+            }
+        }
+    }
 }

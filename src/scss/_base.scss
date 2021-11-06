@@ -27,7 +27,7 @@ p {
 
 a {
     color: $primary;
-    transition: color 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
     text-decoration: none;
 
     &:hover {
