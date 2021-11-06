@@ -20,6 +20,11 @@ h2 {
     @include fontStyles($h2);
 }
 
+h3 {
+    margin-bottom: 10px;
+    @include fontStyles($h3);
+}
+
 p {
     @include fontStyles($text);
     margin-bottom: 30px;

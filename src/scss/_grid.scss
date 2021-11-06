@@ -13,7 +13,7 @@
 }
 
 @each $breakpoint, $width in $breakpoints {
-    @if ($width >= 568) {
+    @if ($width >= 768) {
         @media (min-width: $width) {
             .container {
                 max-width: $width;
@@ -91,6 +91,10 @@
 
     &-row-center {
         justify-content: center;
+    }
+
+    &-column {
+        flex-direction: column;
     }
 
     @each $breakpoint, $width in $breakpoints {

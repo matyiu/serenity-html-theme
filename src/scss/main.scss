@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import 'functions';
 @import 'mixins';
 @import 'vars';
@@ -86,5 +88,128 @@
         width: 100%;
         margin: 0 auto;
         text-align: center;
+    }
+}
+
+.process {
+    padding: 150px 0;
+    background-image: url('/dist/assets/images/process-bg.png');
+    background-repeat: repeat;
+    color: $normalTextLight;
+
+    h2, h3 {
+        color: $headingTextLight
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 520px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 102px;
+    }
+
+    .process-stage {
+        padding-bottom: 300px;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;        
+
+        &-icon {
+            width: 120px;
+            min-width: 120px;
+            height: 120px;
+            background-color: $primaryLightBg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 60px;
+            color: $headingText;
+
+            i {
+                width: 42px;
+                height: 42px;
+                @include fontStyles(fontMap(em(42), em(42, 42), 400));
+            }
+        }
+
+        &-content {
+            width: 100%;
+            max-width: 403px;
+            margin-left: 15px;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+
+        &-line {
+            height: 100%;
+            width: 8px;
+            background-color: $primaryLightBg;
+            position: absolute;
+            top: 120px;
+            left: (math.div(120, 2) - math.div(8, 2)) * 1px;
+        }
+
+        @media (min-width: map-get($breakpoints, 'sm')) {
+            justify-content: space-between;
+
+            &-content {
+                max-width: 546px;
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: map-get($breakpoints, 'md')) {
+            &-content {
+                max-width: 568px;
+            }
+        }
+
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            display: inline-flex;
+            justify-content: flex-start;
+            width: auto;
+            margin: 0 auto;
+
+            &:nth-child(even) {
+                .process-stage-content {
+                    right: calc(50% + 65px);
+                }
+            }
+
+            &:nth-child(odd) {
+                .process-stage-content {
+                    left: calc(50% + 65px);
+                }
+            }
+
+            &:last-child {
+                .process-stage-content {
+                    left: auto;
+                    right: auto;
+                    max-width: 572px;
+                    text-align: center;
+                }
+            }
+
+            &-icon {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &-line {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &-content {
+                max-width: 352px;
+                position: relative;
+                top: (120 + 30) * 1px;
+                margin: 0;
+            }
+        }
     }
 }
