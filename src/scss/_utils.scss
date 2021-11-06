@@ -1,0 +1,7 @@
+@each $breakpoint, $width in $breakpoints {
+    @media (max-width: calc($width - 1px)) {
+        .hidden-#{$width} {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.social-links {
+    display: flex;
+    flex-flow: row wrap;
+
+    > a {
+        display: inline-block;
+        padding: 10px;
+    }
+}
+
+.brandName {
+    font-size: rem(24);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu {
+    display: none;
+    list-style: none;
+
+    @media (min-width: map-get($breakpoints, 'lg')) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    li {
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        padding: 20px 15px;
+        display: block;
+        text-decoration: none
+        ;
+    }
+
+    &-toggle {
+        display: block;
+        padding: 20px 15px;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+    
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            display: none;
+        }
+    }
+
+    &-vertical {
+        flex-direction: column;
+    }
+
+    &-link {
+        gap: 10px;
+
+        a {
+            padding: 0;
+        }
+    }
+}
+
+.copy-footer {
+    font-size: rem(14);
+
+    a::after {
+        content: "|";
+        margin: 0 8px;
+    }
+}
