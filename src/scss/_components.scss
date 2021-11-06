@@ -49,11 +49,10 @@
 
     &-vertical {
         flex-direction: column;
+        gap: 10px;
     }
 
     &-link {
-        gap: 10px;
-
         a {
             padding: 0;
         }
