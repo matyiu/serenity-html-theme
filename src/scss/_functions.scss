@@ -5,3 +5,13 @@
 @function em($unit, $base: 16) {
     @return ($unit / $base) * 1em;
 }
+
+@function fontMap($size, $line, $weight) {
+    $map: (
+        size: $size,
+        line: $line,
+        weight: $weight
+    );
+
+    @return $map;
+}

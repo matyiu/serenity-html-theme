@@ -7,9 +7,6 @@
 
 body {
     font-family: $text-fontFamily;
-    font-size: 20px;
-    line-height: $textLine;
-    font-weight: $textWeight;
     overflow-x: hidden;
 }
 
@@ -18,40 +15,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: $h2Size;
-    line-height: $h2Line;
-    font-weight: $h2Weight;
-    letter-spacing: $h2Spacing;
     text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-
-    &::after {
-        content: "";
-        width: 92px;
-        height: 5px;
-        position: absolute;
-        bottom: -20px;
-        background-color: $headingText;
-        border-radius: 2px;
-    }    
+    margin-bottom: 25px;
+    @include fontStyles($h2);
 }
 
 p {
-    font-size: $textSize;
-    line-height: $textLine;
-    font-weight: $textWeight;
-    margin-bottom: $textLine;
+    @include fontStyles($text);
+    margin-bottom: 30px;
 }
 
 a {
-    color: $secondary;
+    color: $primary;
     transition: color 0.25s ease-in-out;
+    text-decoration: none;
 
     &:hover {
-        color: $headingText;
+        color: darken($primary, 20);
     }
 }
 

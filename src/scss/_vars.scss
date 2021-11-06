@@ -8,20 +8,20 @@
 
 $white: #fff;
 
-$primary: #ECBA09;
-$secondary: #ED3A3A;
-$heroOverlay: rgba(#EC1F1F, 0.73);
-$footerBg: #0E0E0E;
+$primary: #2E5ACE;
+$primaryLightBg: #F0F4FF;
+$primaryDarkBg: #050C1D;
+$primaryDarkerBg: #02060F;
 
 // Typography
 
 // Dark
-$headingText: #131212;
-$normalText: #1E1C1C;
+$headingText: #121212;
+$normalText: #1F1F1F;
 
 // Light
-$headingTextLight: #EFEFEF;
-$normalTextLight: #C9C9C9;
+$headingTextLight: #F2F2F2;
+$normalTextLight: #D9D9D9;
 
 /*
 ---------------------------------
@@ -29,7 +29,7 @@ $normalTextLight: #C9C9C9;
 ---------------------------------
 */
 
-$button-shadow: 0px 4px 21px 0px rgba(#343434, 0.33);
+$button-shadow: 0px 4px 33px 0px rgba(#343434, 0.33);
 
 $border-radius: 3px;
 
@@ -41,48 +41,35 @@ $border-radius: 3px;
 
 // General
 
-$boldHeading-fontFamily: "Roboto Slab", sans-serif;
-$heading-fontFamily: "PT Sans", sans-serif;
-$text-fontFamily: "PT Sans", sans-serif;
+$heroHeading-fontFamily: "Open Sans", sans-serif;
+$heading-fontFamily: "Open Sans", sans-serif;
+$text-fontFamily: "Open Sans", sans-serif;
 
-// Bold Title
+// Hero Heading
 
-$boldTitleSize:   em(80);
-$boldTitleLine:   em(95, 80);
-$boldTitleWeight: 900;
+$heroHeading: fontMap(em(64), em(96, 64), 400);
+$heroSubHeading: fontMap(em(22), em(48, 22), 400);
 
 // Headings
 
-$h2Size:    40px;
-$h2Line:    40px;
-$h2Weight:  300;
-$h2Spacing: 0.13em;
+$h2: fontMap(em(40), em(70, 40), 400);
+$h3: fontMap(em(24), em(40, 24), 700);
 
 // Paragraph
 
-$textSize:    em(20);
-$textLine:    em(30, 20);
-$textWeight:  400;
+$text: fontMap(em(20), em(30, 20), 400);
 
 // Menu Link
 
-$menuLinkSize:    em(15);
-$menuLinkLine:    em(19, 15);
-$menuLinkWeight:  400;
+$menu: fontMap(em(15), auto, 400);
 
 // Components
 
-$copySize:    em(16);
-$copyLine:    em(20, 16);
-$copyWeight:  400;
+$copy: fontMap(em(15), em(30, 15), 400);
 
-$buttonSize:    rem(22);
-$buttonLine:    rem(22, 22);
-$buttonWeight:  400;
+$button: $text;
 
-$logoSize:    em(24);
-$logoLine:    em(30, 24);
-$logoWeight:  400;
+$brand: fontMap(rem(24), rem(30, 24), 700);
 
 /*
 ---------------------------------

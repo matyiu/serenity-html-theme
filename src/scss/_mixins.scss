@@ -1,0 +1,7 @@
+@mixin fontStyles($fontMap) {
+    font: {
+        size: map-get($fontMap, 'size');
+        weight: map-get($fontMap, 'weight');
+    };
+    line-height: map-get($fontMap, 'line');
+}
