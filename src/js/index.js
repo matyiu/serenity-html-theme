@@ -7,7 +7,7 @@ const initPortfolio = () => {
 
 const initImages = (images) => {
     images.forEach(image => {
-        const url = '/dist' + image.dataset.image;
+        const url = image.dataset.image;
         image.style.backgroundImage = `url('${url}')`;
     });
 }
