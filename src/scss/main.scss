@@ -47,10 +47,10 @@
     background-size: cover;
     padding: 125px 0;
     background-position: top center;
-    background-image: url('/dist/assets/images/hero-bg.png');
+    background-image: url('../images/hero-bg.png');
 
     @media (min-width: map-get($breakpoints, 'md')) {
-        background-image: url('/dist/assets/images/hero-bg-lg.png');
+        background-image: url('../images/hero-bg-lg.png');
     }
 
     @media (min-width: map-get($breakpoints, 'lg')) {
@@ -58,7 +58,7 @@
     }
 
     @media (min-width: map-get($breakpoints, 'xl')) {
-        background-image: url('/dist/assets/images/hero-bg-xl.png');
+        background-image: url('../images/hero-bg-xl.png');
     }
 
     &-heading {
@@ -93,7 +93,7 @@
 
 .process {
     padding: 150px 0;
-    background-image: url('/dist/assets/images/process-bg.png');
+    background-image: url('../images/process-bg.png');
     background-repeat: repeat;
     color: $normalTextLight;
 
@@ -395,6 +395,7 @@
 
     @media (min-width: map-get($breakpoints, 'md')) {
         text-align: left;
+        margin: 0;
     }
 
     @media (min-width: map-get($breakpoints, 'xl')) {

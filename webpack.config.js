@@ -19,7 +19,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/assets')
     },
     entry: {
-        main: './src/js/index.js'
+        main: './src/index.js'
     },
     module: {
         rules: [
@@ -40,7 +40,14 @@ module.exports = {
                     presets: ['@babel/preset-env']
                   }
                 }
-              }
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]',
+                }
+            }
         ]
     },
     plugins: [
