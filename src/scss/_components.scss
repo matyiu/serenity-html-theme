@@ -18,15 +18,33 @@
     flex-flow: row wrap;
     list-style: none;
 
+    &-container {
+        position: relative;
+    }
+
     &-responsive {
         display: none;
+
+        &[data-open="true"] {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            background: $primaryDarkerBg;
+            min-width: 140px;
+            text-align: center;
+
+            li,
+            a {
+                width: 100%;
+            }
+        }
 
         @media (min-width: map-get($breakpoints, 'lg')) {
             display: flex;
             flex-flow: row wrap;
         }
     }
-
 
     li {
         padding: 0;
