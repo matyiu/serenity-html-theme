@@ -93,8 +93,16 @@
         justify-content: center;
     }
 
+    &-row-between {
+        justify-content: space-between;
+    }
+
     &-column {
         flex-direction: column;
+    }
+
+    &-column-center {
+        align-items: center;
     }
 
     @each $breakpoint, $width in $breakpoints {

@@ -289,3 +289,115 @@
         text-align: center;
     }
 }
+
+.stats {
+    padding: 150px 0;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+    
+    &-list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 639px;
+        margin: 0 auto;
+
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            max-width: 1019px;
+        }
+    }
+
+    &-number {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7;
+
+        header {
+            @include fontStyles(fontMap(em(48), em(56, 48), 400));
+        }
+
+        footer {
+            @include fontStyles(fontMap(em(16), em(25, 16), 400));
+        }
+
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            header {
+                @include fontStyles(fontMap(em(70), em(80, 70), 400));
+            }
+    
+            footer {
+                @include fontStyles(fontMap(em(22), em(40, 22), 400));
+            }
+        }
+    }
+}
+
+.pageFooter {
+    background-color: $primaryDarkerBg;
+    padding: 120px 0;
+    color: $normalTextLight;
+    font-size: 12.8px;
+
+    > .container > .grid:first-child {
+        margin-bottom: 60px;
+    }
+
+    h1, h2, h3 {
+        color: $headingTextLight;
+    }
+
+    a {
+        color: $normalTextLight;
+
+        &:hover {
+            color: $primaryLightBg;
+        }
+    }
+
+    .menu {
+        margin-bottom: 60px;
+
+        a {
+            @include fontStyles(fontMap(rem(16), rem(30, 16), 400));
+        }
+    }
+
+    .social-links {
+        @include iconSize(rem(18, 16), 18px);
+    }
+
+    @media (min-width: map-get($breakpoints, 'lg')) {
+        font-size: 16px;
+
+        .menu a {
+            @include fontStyles($text);
+        }
+    }
+}
+
+.footer-about {
+    max-width: 357px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+
+    p {
+        text-align: left;
+    }
+
+    @media (min-width: map-get($breakpoints, 'sm')) {
+        max-width: 482px;
+    }
+
+    @media (min-width: map-get($breakpoints, 'md')) {
+        text-align: left;
+    }
+
+    @media (min-width: map-get($breakpoints, 'xl')) {
+        max-width: 363px;
+    }
+}

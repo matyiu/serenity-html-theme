@@ -14,13 +14,19 @@
 }
 
 .menu {
-    display: none;
+    display: flex;
+    flex-flow: row wrap;
     list-style: none;
 
-    @media (min-width: map-get($breakpoints, 'lg')) {
-        display: flex;
-        flex-flow: row wrap;
+    &-responsive {
+        display: none;
+
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            display: flex;
+            flex-flow: row wrap;
+        }
     }
+
 
     li {
         padding: 0;
@@ -88,10 +94,16 @@
 }
 
 .copy-footer {
-    @include fontStyles($copy);
+    @include fontStyles(fontMap(rem(14), rem(30, 14), 400));
+    text-align: right;
+    justify-content: right;
 
     a::after {
         content: "|";
         margin: 0 8px;
+    }
+
+    @media (min-width: map-get($breakpoints, 'lg')) {
+        @include fontStyles($copy);
     }
 }

@@ -9,3 +9,12 @@
 .bg-primary-light {
     background-color: $primaryLightBg;
 }
+
+.bg-dark {
+    background-color: $primaryDarkBg;
+    color: $normalTextLight;
+
+    h1, h2, h3 {
+        color: $headingTextLight;
+    }
+}

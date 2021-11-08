@@ -5,3 +5,15 @@
     };
     line-height: map-get($fontMap, 'line');
 }
+
+@mixin iconSize($size, $px) {
+    i.bi {
+        font: {
+            size: $size;
+        };
+        line-height: $size;
+        width: $px;
+        height: $px;
+        display: inline-block;
+    }
+}
