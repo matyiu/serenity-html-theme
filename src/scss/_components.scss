@@ -101,7 +101,8 @@
     &-primary {
         background: $primary;
         box-shadow: $button-shadow;
-        transition: all 0.25s ease-in-out;
+        transition: background 0.25s ease-in-out,
+                    color 0.25s ease-in-out;
         color: $headingTextLight;
 
         &:hover {

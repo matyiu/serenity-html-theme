@@ -1,3 +1,5 @@
+import './animations';
+
 const initPortfolio = () => {
     const images = Array.from(document.querySelectorAll('.portfolio-item-image'));
     initImages(images);
